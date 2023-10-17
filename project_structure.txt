@@ -1,0 +1,120 @@
+.
+├── README.md
+├── frontend
+│   ├── README.md
+│   ├── babel.config.js
+│   ├── jsconfig.json
+│   ├── node_modules
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── public
+│   ├── src
+│   └── vue.config.js
+├── knexfile.js
+├── migrations
+│   ├── 20231017195229_create_users_table.js
+│   ├── 20231017195541_create_movies_table.js
+│   └── 20231017195620_create_reviews_table.js
+├── node_modules
+│   ├── accepts
+│   ├── array-flatten
+│   ├── body-parser
+│   ├── buffer-writer
+│   ├── bytes
+│   ├── call-bind
+│   ├── colorette
+│   ├── commander
+│   ├── content-disposition
+│   ├── content-type
+│   ├── cookie
+│   ├── cookie-signature
+│   ├── cors
+│   ├── debug
+│   ├── depd
+│   ├── destroy
+│   ├── ee-first
+│   ├── encodeurl
+│   ├── escalade
+│   ├── escape-html
+│   ├── esm
+│   ├── etag
+│   ├── express
+│   ├── finalhandler
+│   ├── forwarded
+│   ├── fresh
+│   ├── function-bind
+│   ├── get-intrinsic
+│   ├── get-package-type
+│   ├── getopts
+│   ├── has
+│   ├── has-proto
+│   ├── has-symbols
+│   ├── http-errors
+│   ├── iconv-lite
+│   ├── inherits
+│   ├── interpret
+│   ├── ipaddr.js
+│   ├── is-core-module
+│   ├── knex
+│   ├── lodash
+│   ├── media-typer
+│   ├── merge-descriptors
+│   ├── methods
+│   ├── mime
+│   ├── mime-db
+│   ├── mime-types
+│   ├── ms
+│   ├── negotiator
+│   ├── object-assign
+│   ├── object-inspect
+│   ├── on-finished
+│   ├── packet-reader
+│   ├── parseurl
+│   ├── path-parse
+│   ├── path-to-regexp
+│   ├── pg
+│   ├── pg-cloudflare
+│   ├── pg-connection-string
+│   ├── pg-int8
+│   ├── pg-pool
+│   ├── pg-protocol
+│   ├── pg-types
+│   ├── pgpass
+│   ├── postgres-array
+│   ├── postgres-bytea
+│   ├── postgres-date
+│   ├── postgres-interval
+│   ├── proxy-addr
+│   ├── qs
+│   ├── range-parser
+│   ├── raw-body
+│   ├── rechoir
+│   ├── resolve
+│   ├── resolve-from
+│   ├── safe-buffer
+│   ├── safer-buffer
+│   ├── send
+│   ├── serve-static
+│   ├── setprototypeof
+│   ├── side-channel
+│   ├── split2
+│   ├── statuses
+│   ├── supports-preserve-symlinks-flag
+│   ├── tarn
+│   ├── tildify
+│   ├── toidentifier
+│   ├── type-is
+│   ├── unpipe
+│   ├── utils-merge
+│   ├── vary
+│   └── xtend
+├── package-lock.json
+├── package.json
+├── project_structure.txt
+├── seeds
+│   ├── 01_users.js
+│   ├── 02_movies.js
+│   └── 03_reviews.js
+└── server.js
+
+100 directories, 18 files

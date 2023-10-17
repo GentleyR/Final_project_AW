@@ -6,7 +6,7 @@ exports.up = function(knex) {
       table.integer('movie_id').unsigned().notNullable();
       table.foreign('movie_id').references('movies.id');
       table.integer('rating').notNullable(); // e.g., a rating out of 5 stars.
-      table.text('review_text').notNullable(); // The text content of the review.
+      table.text('text_review').notNullable(); // The text content of the review.
       table.timestamps(true, true);
     });
   };
