@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffe4b5; /* Couleur de fond beige clair */
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Hauteur de la vue du navigateur */
+}
+
+.cttn {
+    text-align: center;
+}
+
+.title {
+    font-size: 48px;
+    color: #333;
+    position: absolute;
+    top: 15px; /* Position du titre à 50px depuis le haut de la page */
+    left: 50%; /* Position au centre horizontalement */
+    transform: translateX(-50%); /* Centrage horizontal */
+}
+    
+       
+
+.top-left-link {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    color: #333; /* Couleur du lien */
+}
+.log {
+    position: absolute;
+    top: 20px; /* Ajustez la distance depuis le bord supérieur de la page */
+    right: 20px; /* Ajustez la distance depuis le bord droit de la page */
+    padding: 10px 20px; /* Espace intérieur du bouton */
+    background-color: #0074D9; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    text-decoration: none; /* Supprime les styles de lien par défaut */
+    border: none; /* Supprime les bordures */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur de type main lors du survol */
+    /* Ajoutez d'autres styles au besoin */
+}
+.reg {
+    position: absolute;
+    top: 20px; /* Ajustez la distance depuis le bord supérieur de la page */
+    right: 100px; /* Ajustez la distance depuis le bord droit de la page */
+    padding: 10px 20px; /* Espace intérieur du bouton */
+    background-color: #0074D9; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    text-decoration: none; /* Supprime les styles de lien par défaut */
+    border: none; /* Supprime les bordures */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur de type main lors du survol */
+    /* Ajoutez d'autres styles au besoin */
+}
+
+.container {
+    position: relative;
+    margin-top: 15px;
+    height: 80%;
+    left: 0%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    max-width: 100%;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.container .card {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 105px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.container .card .content {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.75s;
+    z-index: -5;
+}
+
+.container .card:hover .content {
+    transform: translateY(1px);
+    opacity: 1;
+}
+
+
+.container .card .content .image1 {
+    position:center;
+    top: 0;
+    right: 0;
+    border-radius: 25%;
+    opacity: 1;
+    width: 280px;
+    height:400px ;
+    z-index: 0;
+}
+.container .card .content .image2 {
+    position:center;
+    top: 0;
+    right: 0;
+    border-radius: 25%;
+    opacity: 1;
+    width: 280px;
+    height:400px ;
+    z-index: 0;
+}
+
+.container .card .content .image3 {
+    position:center;
+    top: 0;
+    right: 0;
+    border-radius: 25%;
+    opacity: 1;
+    width: 280px;
+    height:400px ;
+    z-index: 0;
+}
+
+

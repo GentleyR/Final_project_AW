@@ -4,15 +4,52 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="icon" href="%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <title>AV-TRACKER</title>
   </head>
   <body>
-    <h1>jehj</h1>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <a class="log" href="login.html">Login</a>
+    <a class="reg" href="register.html">Register</a>
+    <div class="cttn">
+      <h1 class="title">AV-TRACKER</h1>
+  </div>
+  <div class="container" id="cont">
+    <div class="card" id="cad">
+        <div class="content" id="contt">
+          <a href="https://www.imdb.com/title/tt15398776/"><img class="image1" src="/img/opp.jpg"></a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="content"> 
+            
+            <img class="image2" src="/img/Barbie.jpg">
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <img class="image3" src="/img/thenun2.jpg">
+        </div>
+    </div>
+</div> 
   </body>
+</body>
+
+<script type="text/javascript" src="vanilla-tilt.js"></script>
+<script>
+    
+    VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 25,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.3
+    });
+
+    const navbarButton = document.querySelector(".menu-button")
+    const navlinks = document.querySelector(".navlinks")
+
+    navbarButton.addEventListener('click', ()=>{
+        navlinks.classList.toggle('mobile-menu')
+    })
+</script>
 </html>
