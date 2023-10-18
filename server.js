@@ -4,17 +4,18 @@ const cors = require('cors');
 const knex = require('knex')(require('./knexfile').development);
 
 const app = express();
+app.use(express.static('frontend/public'));
 
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
 
 // Test route
-app.get('/', (req, res) => {
+app.get('/api/users/register', (req, res) => {
     res.send('Movie Review API is running!');
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
@@ -24,31 +25,27 @@ app.listen(PORT, () => {
 app.post('/api/users/register', async (req, res) => {
     const { username, email, password } = req.body;
 
-    // TODO: Hash the password before storing (use bcrypt or similar library)
-
     try {
-        const userId = await knex('users').insert({ username, email, password });
-        res.json({ success: true, userId });
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const userId = await knex('users').insert({ username, email, password: hashedPassword });
+        res.status(201).json({ success: true, userId });
     } catch (error) {
-        res.status(500).json({ success: false, message: 'Error registering user.' });
+        res.status(500).json({ success: false, message: 'Error registering user.', error: error.message });
     }
 });
 
-// User Login
 app.post('/api/users/login', async (req, res) => {
     const { email, password } = req.body;
 
-    // TODO: Check hashed password (use bcrypt or similar library)
-
     try {
         const user = await knex('users').where({ email }).first();
-        if (user && user.password === password) { // This is a basic check. In real-world scenarios, you'd compare hashed passwords.
+        if (user && await bcrypt.compare(password, user.password)) {
             res.json({ success: true, userId: user.id });
         } else {
-            res.status(400).json({ success: false, message: 'Invalid credentials.' });
+            res.status(401).json({ success: false, message: 'Invalid credentials.' });
         }
     } catch (error) {
-        res.status(500).json({ success: false, message: 'Error logging in.' });
+        res.status(500).json({ success: false, message: 'Error logging in.', error: error.message });
     }
 });
 

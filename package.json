@@ -1,12 +1,15 @@
 {
   "name": "final_project_aw",
   "version": "1.0.0",
+  
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js" 
+    
   },
   "keywords": [],
+  
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -16,4 +19,5 @@
     "knex": "^3.0.1",
     "pg": "^8.11.3"
   }
+  
 }

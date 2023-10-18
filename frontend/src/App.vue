@@ -21,6 +21,16 @@ export default {
 
 <style>
 #app {
+  position: relative; /* Container is relatively positioned /
+}
+
+.top-right-links {
+  position: absolute; / Position the links absolutely /
+  top: -30px; / Adjust the top position as needed /
+  right: 10px; / Adjust the right position as needed */
+}
+
+#app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -29,3 +39,4 @@ export default {
   margin-top: 60px;
 }
 </style>
+
